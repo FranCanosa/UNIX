@@ -1,0 +1,40 @@
+< , >  →  redireccionar entrada y salida
+>>  →  añade al archivo   ejemplo: cat archivo1 archivo2 >> archivo3
+stdin  →  secuencia de entrada  
+stdout  →  secuencia de salida  
+cat  →  mostrar contenido del archivo   ejemplo: cat archivo.txt  
+echo  →  imprimir texto por pantalla   ejemplo: echo "Opa Racing"  
+tee  →  guarda la salida de un archivo y la muestra   →  ls | tee lista.txt  
+more  →  muestra el contenido por páginas  
+less  →  se mueve entre arriba y abajo  
+ls  →  lista archivos y directorios de la ubicación que tengamos  
+cd  →  moverse entre directorios  
+pwd  →  muestra directorio actual  
+mkdir  →  crea un directorio  
+rm  →  elimina archivos o directorios  
+cp  →  copia  
+mv  →  mueve o renombra archivos  
+ps  →  muestra procesos en ejecución         ejemplo: ps aux  
+kill  →  termina un proceso  
+top  →  muestra procesos en tiempo real  
+jobs  →  muestra procesos en segundo plano  
+bg  →  envía proceso suspendido a 2º plano         ejemplo: bg %1  
+fg  →  trae proceso a 1º plano  
+nano  →  editor de texto  
+vi  →  editor de texto avanzado  
+touch  →  crea un archivo vacío o actualiza su fecha de modificación  
+grep  →  busca patrones en archivos   ejemplo: grep "error" archivo.txt  
+find  →  busca archivos en el sistema  
+chmod  →  cambia permisos de un archivo  
+chown  →  cambia el propietario de un archivo  
+su  →  cambia de usuario   ejemplo: su root  
+sudo  →  ejecuta con permisos de admin.  
+locate  →  busca archivos rápidamente  
+rwx  →  permisos r (read) w (write) x (ejecución)  
+useradd  →  crea un usuario  
+groupadd  →  crea un grupo  
+passwd  →  cambia contraseña de usuario  
+/etc/passwd  →  info de usuarios del sistema  
+/etc/shadow  →  info. contraseñas cifradas  
+iptables  →  configura reglas de firewall  
+ssh  →  conexión a servidores de forma remota  
