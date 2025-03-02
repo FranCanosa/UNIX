@@ -1,0 +1,23 @@
+[sudo su] -> para entrar como administrador => la mía: Minisdef01
+
+crear un archivo de texto -> touch clase1.txt
+
+editar en un editor -> nano clase1.txt
+
+control x -> lo guardamos y le damos que si S
+
+leer un contenido -> cat clase1.txt
+
+moverlo y copiarlo a otro directorio
+
+cd .. -> para ir hacia atrás
+
+mv clase1.txt -> a donde lo queremos mover
+
+cp clase1.txt ->
+
+rm clase1.txt -> elimina archivo
+
+rm -r dir -> elimina directorio si tengo archivos dentro
+
+rm -dir " " -> elimina el directorio si no tiene archivos dentro
