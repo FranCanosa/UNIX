@@ -1,0 +1,48 @@
+creamos una carpeta llamada UNIX: mkdir UNIX
+creamos dentro una subcarpeta llamada Clase1
+con archivos cortos utilizamos podemos crear un archivo con el texto ya insertado: echo "texto" > ejemplo.txt
+añadir contenido a 1 archivo creado: echo "esto es un mensaje"
+lo redirigimos a 1 archivo creado: "esto es un mensaje" >> archivo.txt
+duplicar la salida, guardarlo y mostrarlo:
+echo "soy un mensaje" | tee salida.txt
+en archivos grandes:
+touch archivo_grande.txt
+nano archivo_grande.txt
+ver archivo grande: more archivo_grande.txt
+para movernos en erchivos grandes: less archivo_grande.txt
+PRÁCTICA:
+. Crear 1 conjunto de líneas archivo de prueba:
+echo "Esta es la línea 1" > ejemplo.txt
+echo "Esta es la línea 2" >> ejemplo.txt
+echo "Esta es la línea 3" >> ejemplo.txt
+echo "Esta es la línea 4" >> ejemplo.txt
+. mostramos el contenido: cat ejemplo.txt
+. añadimos línea y la mostramos por pantalla:
+echo "nueva línea añadida con tee" | tee (la sobreescribe)
+echo "nueva línea añadida con tee" | tee -a ejemplo.txt (no la sobreescribe)
+Recuerda: con more y less nos movemos por el archivo.
+. mostramos el contenido usando <, por ejemplo:
+cat < ejemplo.txt
+OTRA PRÁCTICA:
+- crear archivo y añadir 4 líneas:
+echo "Esta es la línea 1" > ejemplo2.txt
+echo "Esta es la línea 2" >> ejemplo2.txt
+echo "Esta es la línea 3" >> ejemplo2.txt
+echo "Esta es la línea 4" >> ejemplo2.txt
+- mostramos el contenido:
+cat ejemplo2.txt
+- añadimos línea con tree:
+echo "Esto es la línea 5" | tee -a ejemplo2.txt
+- mostrar solo 3 primeras líneas:
+cat ejemplo2.txt | more head - n 3 (me muestra las 3 primeras líneas)
+cat ejemplo2.txt | grep 3 (muestro solo la línea 3)
+- redirigir la salida estándar y la de error a archivos distintos:
+echo "Mensaje correcto" > salida.txt
+ls archivo_inexistente2 > error.txt (nos debería de dar error)
+OTRA PRÁCTICCA
+- Con el archivo que tenemos vamos a crear 3 copias:
+cat ejemplo2.txt | tee copia1.txt | tee copia2.txt | teecopia3.txt
+- mostramos 1 copia con el less
+- crear 1 proceso sonde guardamos un mensaje que introduce el usuario en 1 archivo.
+
+
