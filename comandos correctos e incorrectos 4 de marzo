@@ -1,0 +1,15 @@
+1. crear un archivo con comandos correctos e incorrectos:
+echo "echo 'Este es un comando correcto'" > comandos.sh
+echo "ls archivo_que_noexiste" >> comandos.sh
+echo "echo 'Otro comando válido'">> comandos.sh
+2. Ejecuta los comandos y separarlos en stdout y stderr:
+bash comandos.sh> salida.txt 2> errores2.txt
+
+3. Mostrar resultados:
+echo "salida estándar:"
+cat salida.txt
+
+echo "Errores"
+cat errores2.txt
+
+bash comandos.sh > salida3.txt 3> salida2.txt 2> salida.txt
