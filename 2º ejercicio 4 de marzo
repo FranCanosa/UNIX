@@ -1,0 +1,12 @@
+para contar las líneas del archivo:
+cat registros.txt | wc -l
+ahora creamos un archivo añadiendo líneas que queremos:
+echo "[INFO] Usuario 1 inicio sesión" > logs.txt
+echo "[WARNING] Usuario 2 intentó acceso no autorizado" >> logs.txt
+echo "[ERROR] Usuario 3 falló 3 intentos de acceso" >> logs.txt
+echo "[INFO] Usuario 4 cerró sesión" >> logs.txt.
+2. mostrar solo los errores:
+cat logs.txt | grep "[ERROR]" > errores.txt 
+3. cuántas líneas tenemos de cada tipo, para ello creo un archivo que se llama resumen.txt y ejecuto los siguientes comandos para que me muestre el número de líneas donde aparece la información filtrada:
+echo "Total de líneas de INFO:" | tee resumen.txt
+cat logs.txt | grep "INFO" | wc -l | tee -a resumen.txt
