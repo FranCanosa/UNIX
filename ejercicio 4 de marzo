@@ -1,0 +1,18 @@
+1.- Crea un archivo llamado "registros.txt" y agrega las siguientes líneas:
+- "Usuario1 inició sesión"
+- "Usuario2 cerró sesión"
+- "Usuario3 realizó una operación"
+2.- Muestra el contenido del archivo y verifica que se ha guardado correctamente
+3.- Agrega 2 nuevas líneas:
+- "Usuario4 inició sesión"
+- "Usuario5 cerró sesión"
+4.- Usa tee para guardar contenido y guarda una copia en "registro_copia.txt".
+5.- Usa more o less para visualizar el contenido
+6.- Simula un error ejecutando sobre un archivo inexistente y mándalo a un archivo llamado "errores.txt"
+7.- Crea un proceso interactivo donde usuario escriba líneas y lo guarde en "registros.txt":
+echo "cómo te llamas" (enter)
+read nombre (enter)
+Fran
+echo "como te llamas" $nombre
+echo "como te llamas $nombre >> registros.txt
+8.- Muestra el contenido final con las modificaciones
