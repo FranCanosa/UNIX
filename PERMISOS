@@ -1,0 +1,12 @@
+#Ver permisos de un archivo
+ls -l archivo.txt
+#dar permisos de lectura/escritura/ejecución al dueño, solo lectura a los demás:
+chmod 755 archivo.txt
+#agregar permiso de escritura al dueño
+chmos u+w archivo.txt
+#quitar permisos de lectura a otros
+chmod o-r archivo.txt
+#crear un usuario
+sudo useradd -m UsuarioManuel
+#asignar contraseña a ese usuario
+sudo passwd UsuarioManuel
