@@ -1,0 +1,19 @@
+#ver procesos actuales
+ps
+#ver procesos actuales con detalles:
+ps aux
+#ver procesos por usuario
+ps -u usuario (p.ej ps -u fran canosa)
+#ver procesos en tiempo real
+top
+#eliminar proceso
+1ª opción: kill PID(el que nos ponga)
+2ª opción (a lo bruto): kill -9 PID
+#ver procesos en segundo plano
+jobs
+#mandar proceso al foreground (primer plano)
+fg %1 (lo ejecutará con el último proceso de la lista, si pongo fg %2 lo hará con el penúltimo)
+#enviarlo a background (segundo plano)
+bg %1
+#matar el último proceso en segundo plano
+kill %1
