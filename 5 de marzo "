@@ -1,0 +1,26 @@
+comando sort: es para ordenar
+recuerda que \n era para el salto de línea
+por ejemplo: crear lista con diferentes nombres y ordenarlos:
+echo -e "Jorge\nCarlos \nFran \nAntonio" > nombres.txt
+sort nombres.txt
+
+#mismo pero ordenando numéricamente
+echo -e "100 \n5 \n50 \n44" > edades.txt (el comando -e es para que me reconozca los comandos)
+sort -n edades.txt (me los ordena de menor a mayor)
+
+#Ordenar por columnas
+echo -e "Manuel 23 \n Pedro 54 \n Juan 33 \n Francisco 46" > nombresyedades.txt
+sort -k2 -n nombresyedades.txt (en 2 columnas y -n porque tenemos cifras en esa columna)
+sort -r nombres.txt (lo ordena pero al revés)
+sort -u (te los presenta pero sin duplicarlos)
+
+#mostrar el directorio
+pwd
+#ir al nuestro home
+cd ~ (la virgulilla es darle al mismo tiempo AltGr 4 y luego darle a un space)
+#copiar un archivo o mover una archivo en el nivel de arriba:
+mv copia.txt ../
+#eliminar carpeta (carpeta vacía)
+rmdir proyectos
+#eliminar la carpeta a lo bruto(con archivos)
+rm -r proyectos
