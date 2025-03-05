@@ -1,4 +1,4 @@
-comando sort: es para ordenar
+#comando sort: es para ordenar
 recuerda que \n era para el salto de línea
 por ejemplo: crear lista con diferentes nombres y ordenarlos:
 echo -e "Jorge\nCarlos \nFran \nAntonio" > nombres.txt
@@ -24,3 +24,21 @@ mv copia.txt ../
 rmdir proyectos
 #eliminar la carpeta a lo bruto(con archivos)
 rm -r proyectos
+#copiar un directorio de manera recursiva (tal cual pero de forma que se copie en otro archivo)
+cp -r directorio1/ directorio2/
+#borrar directorio sin tener que ir a esa ruta
+rm -r directorio2/
+#borrar directorio sin tener que ir a esa ruta pero a lo bruto
+rm -rf directorio2/
+#editar con vi
+vi archivo.txt (se abre una ventana, para que salga el prompt "Shift y q al mismo tiempo" y para cerrar el editor teclear quit! (enter)
+#buscar la palabra error en los logs:
+grep "error /var/log/syslog
+#buscar sin distringuir mayúsculas:
+grep -i "linux" archivo.txt
+#buscar archivos .txt en home (o en cualquier ruta:
+find /home -name "*.txt"
+#buscar archivos mayores de 10MB en /var:
+find /var -size +10M
+#buscar directorios en carpeta actual
+find . -type d
