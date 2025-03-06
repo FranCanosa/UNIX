@@ -1,0 +1,14 @@
+#eliminar todos los procesos de un usuario:
+pkill -u fran canosa
+#eliminar todos los procesos de un cierto tipo:
+pkill firefox
+Recuerda permisos:
+lectura (r)
+escritura (w)
+ejecución (x)
+con respeto al tipo de recurso que se refiere el derecho, p.ej:
+-rxw-x-r (el 1er caracter(- si es un archivo, d si se refiere a un directorio), la rxw permisos del dueño, la x permisos del grupo, y la r permisos del resto
+lectura (r): 4
+escritura (w): 2
+ejecución (x): 1
+la suma nos da cada uno de los caracteres del número de permisos: p.ej: chmod 754 ejemplo.txt (el 7 del propietario del archivo tendrá la suma de 4+2+1=7)
