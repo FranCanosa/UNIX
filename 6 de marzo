@@ -46,6 +46,7 @@ nano config.txt
 4. cambiar los permisos de script.sh para hacerlo ejecutable
 chmod 111 script.sh
 5. mover data.txt a otro directorio igual que este
+cp -r E2T/ E2T2/
 6. buscar todos los archivos .txt dentro del segundo directorio
 7. listar los procesos en ejecución y matar uno
 8. usar sudo para modificar los permisos en el archivo config.txt
