@@ -12,5 +12,18 @@ lectura (r): 4
 escritura (w): 2
 ejecución (x): 1
 la suma nos da cada uno de los caracteres del número de permisos: p.ej: chmod 754 ejemplo.txt (el 7 del propietario del archivo tendrá la suma de 4+2+1=7)
-#ejemplo de cambiar de propietario un archivo: chown yeremay: grupo archivo.txt
-#ejemplo de cambiar de propietario un archivo a root: chown root: grupo archivo.txt
+#ejemplo de cambiar de propietario un archivo a un grupo: chown yeremay: grupo archivo.txt
+#ejemplo de cambiar de propietario un archivo a root: sudo chown root archivo.txt
+para cambiar a administrador: sudo su
+#ejecutar un comando como administrador:
+sudo apt update
+#cambiar permisos con sudo
+sudo chmod 777 archivo.txt
+#EJEMPLO 1:
+1. crear usuario
+sudo useradd -m mella
+2. crear un archivo
+3. ver permisos del archivo
+4. cambiar propietario y archivo de grupo
+5. modificar permisos de un archivo con chmod
+ver permisos después
