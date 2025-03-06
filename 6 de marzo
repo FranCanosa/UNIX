@@ -23,7 +23,29 @@ sudo chmod 777 archivo.txt
 1. crear usuario
 sudo useradd -m mella
 2. crear un archivo
+touch opaRacing.txt
 3. ver permisos del archivo
+ls -l opaRacing.txt
 4. cambiar propietario y archivo de grupo
+chown mella: grupo opaRacing.txt
 5. modificar permisos de un archivo con chmod
+sudo chmod 777 opaRacing.txt
 ver permisos después
+ls -l opaRacing.txt
+otra forma de poner los permisos a un archivo:
+chmod u+rwx
+EJEMPLO 2:
+1. crear un directorio:
+mkdir E2T
+2. dentro del directorio crear 3 archivos (config.txt, data.txt y script.sh)
+touch config.txt
+touch config.txt
+touch script.sh
+3. editar config.txt con nano, escibir un mensaje y guardarlo
+
+4. cambiar los permisos de script.sh para hacerlo ejecutable
+5. mover data.txt a otro direcorio igual que este
+6. buscar todos los archivos .txt dentro del segundo directorio
+7. listar los procesos en ejecución y matar uno
+8. usar sudo para modificar los permisos en el archivo config.txt
+9. cambiar el dueño del archivo config.txt
