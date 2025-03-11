@@ -1,0 +1,79 @@
+#creaemos una carpeta nueva llamada PROYECTOS_INVESTIGACION en la que crearemos 3 archivos llamados países.txt. población.txt y areas.txt.
+en google buscaremos 5 datos de cada país: población y área de 5 países:
+españa: área (505 370 km), población (49 077 984 hab)
+francia área (551.695 km), población (68 042 591 hab)
+italia área (301 340 km), población (58 870 764 hab)
+rusia área (17 125 191 km), población (141 698 923hab)
+china área (9 596 960 km), población (1 409 670 000 hab)
+fran-canosa@fran-canosa-VirtualBox:~/Documentos$ mkdir PROYECTO_INVESTIGACION
+fran-canosa@fran-canosa-VirtualBox:~/Documentos$ cd PROYECTO_INVESTIGACION/
+fran-canosa@fran-canosa-VirtualBox:~/Documentos/PROYECTO_INVESTIGACION$ echo  -e "España\nFrancia\nItalia\nRusia\nChina" > paises.txt
+echo -e "505 370\n551.695\n301 340\n17 125 191\n9 596 960"
+echo -e "49 077 984\n68 042 591\n58 870 764\n141 698 923\n1 409 670 000" >poblaciones.txt
+#mostrar los archivos con su nuevo contenido:
+cat paises.txt
+cat poblaciones.txt
+cat areas.txt
+#ordenar alfabéticamente y numéricamente
+sort paises.txt
+sort -n poblaciones.txt
+sort -n areas.txt
+#juntar archivos en columnas y ordenar por la segunda columna posteriormente:
+paste paises.txt poblaciones.txt areas.txt > paises_info.txt
+cat paises_info.txt
+fran-canosa@fran-canosa-VirtualBox:~/Documentos/PROYECTO_INVESTIGACION$ sort -k2 -n paises_info.txt 
+España	49077984	505370
+Italia	58870764	301340
+Francia	68042591	551695
+Rusia	141698923	17125191
+China	1409670000	9596960
+#manipulación de archivos y permisos: darle permisos de lectura y escritura al propietario y solo de lectura a los demás:
+chmod 644 paises_info.txt
+#cambiar propietario
+sudo chown usuario paises_info.txt
+#buscar dentro y fuera del archivo. utilizando grep y find
+grep "e" paises_info.txt
+fran-canosa@fran-canosa-VirtualBox:~/Documentos/PROYECTO_INVESTIGACION$ grep "E" paises_info.txt 
+España	49077984	505370
+find . -name "*.txt"
+fran-canosa@fran-canosa-VirtualBox:~/Documentos/PROYECTO_INVESTIGACION$ find . -name "*.txt"
+./paises_info.txt
+./paises.txt
+./areas.txt
+./poblaciones.txt
+#para ver información de los usuarios: cat /etc/passwd
+#para borrar usuario: sudo userdel -r usuario
+#VER LA ESTRUCTURA DEL DIRECTORIO:
+ls /
+fran-canosa@fran-canosa-VirtualBox:~$ ls /
+bin                dev   lib64              mnt   run                 srv       usr
+bin.usr-is-merged  etc   lib.usr-is-merged  opt   sbin                swap.img  var
+boot               home  lost+found         proc  sbin.usr-is-merged  sys
+cdrom              lib   media              root  snap                tmp
+#en forma de árbol  (instalar librería: sudo apt install tree)
+#TIPOS DE ARCHIVOS:
+- ORDINARIOS: ARCHIVOS DE TEXTO O BINARIOS file nombre_archivo
+- DIRECTORIOS: CARPETAS QUE CONTIENEN LOS ARCHIVOS ls -l
+- ENLACES PUNTEROS: punteros a otros archivos:
+-- duros: un enlace directo al mmismo bloque de datos en el disco, si el archivo se elimina el enlace sigue funcionando ya que está apuntando directamente al archivo.
+No se pueden crear a directorios y solo funcionan dentro del mismo sistema de archivos.
+-- simbólico: es un enlace a otro archivo o directorio, si el archivo se elimina el enlace ya no funciona porque no nos lleva a ningún lado.
+- ESPECIALES: del sistema /dev.
+#ver de qué tipo es un archivo:
+p.ej: fran-canosa@fran-canosa-VirtualBox:~/Documentos$ file edades.txt
+edades.txt: ASCII text
+#crear un enlace simbólico:
+fran-canosa@fran-canosa-VirtualBox:~/Documentos$ ln -s /etc/passwd mi_enlace_1 (creo el enlace)
+fran-canosa@fran-canosa-VirtualBox:~/Documentos$ ls -l mi_enlace_1 (veo las propiedades del enlace)
+lrwxrwxrwx 1 fran-canosa fran-canosa 11 mar 11 09:29 mi_enlace_1 -> /etc/passwd
+#crear un enlace duro:
+p.ej:
+fran-canosa@fran-canosa-VirtualBox:~/Documentos$ ln opaRacing.txt enlace_duro
+fran-canosa@fran-canosa-VirtualBox:~/Documentos$ echo "este es un enlace duro" > opaRacing.txt 
+fran-canosa@fran-canosa-VirtualBox:~/Documentos$ ls -l enlace_duro (veo las propiedades del enlace)
+-rwxrwxrwx 2 fran-canosa fran-canosa 23 mar 11 09:36 enlace_duro
+#si creo un enlace simbólico y después borro el archivo compruebo que después listo el enlace y veo que no funciona:
+fran-canosa@fran-canosa-VirtualBox:~/Documentos$ ln -s edades.txt mi_enlace_2
+fran-canosa@fran-canosa-VirtualBox:~/Documentos$ rm edades.txt 
+fran-canosa@fran-canosa-VirtualBox:~/Documentos$ ls -l mi_enlace_2
+lrwxrwxrwx 1 fran-canosa fran-canosa 10 mar 11 09:40 mi_enlace_2 -> edades.txt
